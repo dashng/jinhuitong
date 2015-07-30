@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>金慧通</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/global.css" rel="stylesheet">
+</head>
+<body>
+	<div class="row nav-content">
+		<div class="nav" >
+			<ul >
+				<li data-href="./index.html">首&nbsp;&nbsp;页<br/> <label class="sub-label"> HOME</label></li>
+				<li data-href="./about_us.html">关于我们<br/><label class="sub-label"> ABOUT US</label></li>
+				<li data-href="./succeed.html">经典案例<br/><label class="sub-label"> CLASSIC CASE</label></li>
+				<li data-href="#">联系我们 <br/><label class="sub-label">CONTACT US</label></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="container" >
+		<div class="row">
+			<img class="logo" src="../images/logo.png" />
+		</div>
+		<div class="row contact-panel" >
+			<img  src="../images/contact_us_band.jpg" />
+		</div>
+		<div class="row">
+			<div class="col-xs-12" style="padding-right:8px;">
+				<div class="col-xs-9 map-content">
+					<div id="allmap"></div>
+				</div>
+				<div class="col-xs-3">
+					<img src="../images/contact_us_via.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<img  src="../images/lookfor.jpg" />
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="../images/lookingfor.hunter.jpg" class="looking-for-detail"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 footer">
+				<img src="../images/footer-info.png" />
+			</div>
+		</div>
+	</div>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/app.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DFXXta8eDtKZCdYU2QbvcH2s"></script>
+	<script type="text/javascript">
+
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(121.648533,38.928521), 18);
+	var local = new BMap.LocalSearch(map, {
+	  renderOptions:{map: map, autoViewport:true}
+	});
+	local.searchNearby("上鼎大厦");
+	</script>
+</body>
+</html>
