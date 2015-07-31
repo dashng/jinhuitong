@@ -15,6 +15,10 @@ img.logo{
 	z-index:99999999;
 }
 
+img.logo.logo2{
+	margin:50px 25px;
+}
+
 div.nav{
 	background:rgba(0, 0, 0, 0.5);
 	height:63px;
@@ -28,14 +32,35 @@ div.nav{
 	color:#fff;
 }
 
+div.nav2{
+	top:100px;
+	background:rgba(0, 0, 0, 0.0);
+	color:#808080;
+}
+
 div.nav label.sub-label{
-	font-size:0.6em;
+	font-size:0.4em;
 	line-height:24px;
 	height:24px;
 	position:relative;
 	top:-29px;
 	letter-spacing:0.1em;
 	cursor:pointer;
+}
+
+div.nav.nav2 label.sub-label{
+	top:-8px;
+}
+
+div.nav.nav2 label.sub-label{
+	color:#808080;
+}
+
+div.nav.nav2 div{
+	margin-top:11px;
+	float:left;
+	line-height:22px;
+	max-height:42px;
 }
 
 div.nav li{
@@ -47,6 +72,7 @@ div.nav li{
 	width:138px;
 	overflow:hidden;
 	padding-left:38px;
+	cursor:pointer;
 }
 
 div.nav li:nth-child(1){
@@ -54,10 +80,19 @@ div.nav li:nth-child(1){
 }
 
 
-div.nav li:hover{
+div.nav li:hover, div.nav li.active{
 	background: rgb(199, 0 ,12) url('../images/select_arrow.png') no-repeat bottom;
-	cursor:pointer;
 }
+
+div.nav.nav2 li:hover , div.nav.nav2 li.active{
+	background:none;
+}
+
+div.nav.nav2 li:hover div, div.nav.nav2 li.active div{
+	background:none;
+	border-bottom:2px solid #c7000c;
+}
+
 
 
 div.nav-content{
@@ -68,6 +103,7 @@ div.nav-content{
 div.container{
 	width:1000px;
 	background:#fff;
+	position:relative;
 }
 
 div.panel-nav{
@@ -182,32 +218,51 @@ div.index-panel-1{
 
 div.index-panel-1 div.slide{
 	margin: -75px 0px 0px 0px;
+	margin-top:150px;
 }
 
 div.index-panel-2{
-	background: url(../images/bg_2.jpg) no-repeat;
+	/*background: url(../images/bg_2.jpg) no-repeat;*/
 	height:551px;
+	padding:0px;
 }
 
 div.index-panel-3{
-	background: url(../images/bg_3.jpg) no-repeat;
+	/*background: url(../images/bg_3.jpg) no-repeat;*/
 	height:551px;
+	padding:0px;
 }
 
 div.index-panel-4{
-	background: url(../images/bg_4.jpg) no-repeat;
+	/*background: url(../images/bg_4.jpg) no-repeat;*/
 	height:551px;
+	padding:0px;
 }
 
 div.footer{
 	background:#fff;
 	margin:0px auto;
 	padding:20px;
-	padding-left:30%;
+	text-align:center;
+	 
 }
 
 .contact-panel{
 	margin-top:150px;
+	
+}
+
+.contact-panel, .lookingfor-title, .cop-title{
+	width:369px;
+	background:#c7000c;
+	height:26px;
+	padding-left:165px;
+}
+
+.contact-panel label, .lookingfor-title label, .cop-title label{
+	color:#fff;
+	font-size:14px;
+	line-height:26px;
 }
 
 #allmap, .map-content{
@@ -224,7 +279,8 @@ img.looking-for-detail{
 
 .about_us_hero{
 	margin:0px auto;
-	padding:55px 0px;	
+	padding:55px 0px;
+	padding-left:130px;	
 }
 
 .heroes{
@@ -267,11 +323,11 @@ div.event{
 	background:#b2b2b2;
 	margin:5px -10px;
 	background: #b2b2b2 url(../images/event_icon.jpg) 22px 22px no-repeat;
+	cursor:pointer;
 }
 
 div.event:hover{
 	background: #7f7f7f url(../images/event_icon.jpg) 22px 22px no-repeat;
-	cursor:pointer;
 }
 
 div.event .desc{
@@ -291,3 +347,115 @@ div.event .time{
 	font-size:0.7em;
 }
 
+.to-top{
+	width:51px;
+	height:75px;
+	position:absolute;
+	right:0px;
+	background: rgba(0,0,0,0) url(../images/to-top.png) no-repeat;
+	cursor:pointer;
+	margin-right:-68px;
+	display:none;
+}
+
+.redian-wrapper{
+	width:374px;
+	height:48px;
+	position:absolute;
+	left:38px;
+	bottom:28px;
+}
+
+.redian{
+	background: rgba(0,0,0,0) url(../images/shishiredian.png) 0px 0px no-repeat;
+	width:54px;
+	height:50px;
+	float:left;
+}
+
+.redian:hover{
+	cursor:pointer;
+}
+
+.redian-content{
+	background: rgba(0,0,0,0) url(../images/redianneirong.png) 0px 0px no-repeat;
+	width:330px;
+	height:50px;
+	float:left;
+	margin-left: -13px;
+	margin-top: 2px;
+	opacity:0.0;
+}
+
+.redian-content label{
+	font-size:11px;
+	line-height: 18px; 
+	margin-top: 4px; 
+	margin-left: 35px; 
+}
+
+.cop-info{
+	height:105px;
+	background:#AFAFAF;
+	color:#fff;
+	border:1px solid #fff;
+	border-right:none;
+	width:267px;
+	padding:16px;
+}
+
+.cop-info label{
+	font-size:12px;
+}
+
+.cop-info p{
+	font-size:14px;
+}
+
+.experts{
+	margin:8px 65px;
+	background:#AFAFAF;
+	word-break:break-all;
+	color:#fff;
+}
+
+.experts h2{
+	text-align:left;
+	padding-top:4px;
+	padding-left:23px;
+}
+
+.experts ul{
+	padding: 8px 23px;
+	
+}
+
+.experts li{
+	list-style:none;
+	padding:4px 0px;
+	font-size:16px;
+}
+
+.experts hr{
+	margin:0px 0px 12px 0px;
+}
+
+.experts.left{
+	margin-right:25px;
+}
+
+.experts.right{
+	margin-left:25px;
+}
+
+.about-us-info, .heroes-info{
+	position:absolute;
+	top:0px;
+	left:255px;
+	font-size:12px;
+	padding-right:65px;
+}
+
+.heroes-info{
+	left:395px;
+}
